@@ -74,7 +74,7 @@
           <div class="popuptext">
             <img src="contactformulier.png" id="cntfrm">
             <p> Als u uw gegevens achterlaat dan mail of bel ik u terug </p>
-            
+
             <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" target="_self"/>
             <div class="gegevens" id="gege">
             <label class="checks">Mevrouw
