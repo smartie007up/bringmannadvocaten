@@ -63,7 +63,7 @@
 
       <div id="box4">
         <img src="pb3.jpg" alt="Patricia Bringmann" id="foto"></img>
-<!--
+
         <div class="cont">
           <a class="btn" href="#" onclick="show('popup1')" title="Contactformulier"><p>Neem contact op!</p></a>
         </div>
@@ -75,36 +75,29 @@
             <img src="contactformulier.png" id="cntfrm">
             <p> Als u uw gegevens achterlaat dan mail of bel ik u terug </p>
 
-            <form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" target="_self"/>
-            <div class="gegevens" id="gege">
-            <label class="checks">Mevrouw
-            <input type="radio" id="radio1" name="gender" value="Mevrouw">
-            <span class="checkmark"></span>
-            <span class="error"><?= $gender_error?></span>
-          </label>
-          <label class="checks">De heer
-          <input type="radio" id="radio2" name="gender" value="De heer">
-          <span class="checkmark"></span>
-          <span class="error"><?= $gender_error ?></span>
-        </label>
-        <br><br>
-        <input type="text" id="naam" name="name" placeholder="Voor- en achternaam">
-        <span class="error"><?= $name_error ?></span>
-        <br><br>
-        <input type="text" id="mail" name="email" placeholder="E-mailadres">
-        <span class="error"><?= $email_error ?></span>
-        <br><br>
-        <textarea value="<?= $message ?>" name="message" id="textarea" placeholder="Waar kan ik u mee helpen?"></textarea>
-        <br><br>
-        <br>
-        <input type="submit" id="submit" name="submit" value="Verzenden">
+      <form method="post" action="form.php" name="contactform" id="contactform">
+        <div class="gegevens" id="gege">
+        <label for="fullname">Naam:</label>
+        <input type="text" name="fullname" id="naam" placeholder="Naam en achternaam"/>
+
+         <br><br>
+
+        <label for="email">Emailadres:</label>
+        <input type="text" name="email" id="mail" placeholder="E-mailadres"/>
+
+         <br><br>
+
+        <textarea value="message" name="message" id="textarea" placeholder="Waar kan ik u mee helpen?"></textarea>
+
+         <br><br>
+
+        <input type="submit" name="submit" value="Verzenden">
+            </div>
+      </form>
+    </div>
       </div>
-      <div class="success"><?= $success ?></div>
-    </form>
-  -->
-</div>
-</div>
-</div>
+      </div>
+
 
 <script src="java.js"></script>
 
