@@ -2,6 +2,10 @@
 Oranje: #f39819
 Grijs: #a1a0a0 */
 
+* {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: futureFixed;
   src: url(FUTRFW.TTF);
@@ -11,18 +15,14 @@ Grijs: #a1a0a0 */
 
 html, body {
   font-family: 'Lato', sans-serif;
-  /* font-family: 'Roboto';*/
-  height: 100%;
   margin: 0;
 }
 
-#box1 {
+.box1 {
   float: left;
-  position: fixed;
-  top: 0;
-  left: 0;
+  background-color: white;
   width: 50%;
-  height: 40%;
+  height: 50vh;
 }
 
 #logo {
@@ -30,18 +30,16 @@ html, body {
   margin-left: auto;
   margin-right: auto;
   vertical-align: middle;
-  width: 50%;
+  width: 55%;
   position: relative;
   top: 25%;
 }
 
-#box2 {
+.box2 {
   float: left;
-  position: fixed;
   background-color:#53c0da;
   width: 50%;
-  height: 40%;
-  left: 50%;
+  height: 50vh;
 }
 
 #info {
@@ -49,22 +47,17 @@ html, body {
   display: block;
   margin: auto;
   vertical-align: middle;
-  padding: 20px 10px 20px 20px;
-  line-height: 2.2vw;
-  font-size: 1.1vw;
+  padding: 30px;
+  line-height: 2.0vw;
+  font-size: 1.8vw;
   color: white;
 }
-
-#box3 {
+.box3 {
   float: left;
-  position: fixed;
-  display: block;
   margin: auto;
   background-color:#f39819;
   width: 50%;
-  height: 60%;
-  top: 40%;
-  padding: 40px 0;
+  height: 50vh;
 }
 
 #data {
@@ -76,13 +69,11 @@ data.th {
   margin: 10px;
 }
 
-#box4 {
+.box4 {
   float: left;
-  position: absolute;
-  top: 40%;
-  left: 50%;
+  background-color: white;
   width: 50%;
-  height: 60%;
+  height: 50vh;
 }
 
 #foto {
@@ -96,11 +87,9 @@ data.th {
 
 #footer {
   float: left;
-  position: relative;
   width: 100%;
-  top: 100%;
   height: 25px;
-  padding: 10px 0;
+  margin: 5px 0px;
   background-color: white;
 }
 
@@ -126,12 +115,13 @@ a:hover {
 
 /* The button in box 4 */
 .cont {
-  position: relative;
-  top: 40%;
+  /* position: relative; */
+  float:left;
 }
 
 a.btn {
-  position: fixed;
+  margin-top: 150px;
+  /* margin-left: 20px; */
   float:left;
   width: 180px;
   height: 45px;
@@ -147,7 +137,7 @@ a.btn {
 a.btn p {
   color: #a1a0a0;
   text-align: center;
-  margin: auto;
+  margin: 0px;
   width: 100%;
   padding: 15px 0px;
 }
@@ -198,5 +188,27 @@ a.btn:hover p {
   background-color: #f39819;
   -webkit-transition: none;
   transition: none;
-
 }
+
+
+@media only screen and (max-width: 860px) {
+  a.btn {
+    width: 100px;
+    height: 70px;
+  }
+
+  /* Use a media query to add a breakpoint at 800px: */
+  @media only screen and (max-width: 768px) {
+    .box1, .box2, .box3, .box4 {
+      width: 100%; /* The width is 100%, when the viewport is 768px or smaller */
+      height: 60vh;
+    }
+    #info, #data {
+      line-height: 3.4vw;
+      font-size: 2.7vw;
+    }
+    a.btn {
+      width: 180px;
+      height: 45px;
+    }
+  }
