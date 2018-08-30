@@ -196,19 +196,19 @@ a.btn:hover p {
     width: 100px;
     height: 70px;
   }
-
-  /* Use a media query to add a breakpoint at 800px: */
-  @media only screen and (max-width: 768px) {
-    .box1, .box2, .box3, .box4 {
-      width: 100%; /* The width is 100%, when the viewport is 768px or smaller */
-      height: 60vh;
-    }
-    #info, #data {
-      line-height: 3.4vw;
-      font-size: 2.7vw;
-    }
-    a.btn {
-      width: 180px;
-      height: 45px;
-    }
+}
+/* Use a media query to add a breakpoint at 800px: */
+@media only screen and (max-width: 768px) {
+  .box1, .box2, .box3, .box4 {
+    width: 100%; /* The width is 100%, when the viewport is 768px or smaller */
+    height: 60vh;
   }
+  #info, #data {
+    line-height: 3.4vw;
+    font-size: 2.7vw;
+  }
+  a.btn {
+    width: 180px;
+    height: 45px;
+  }
+}
