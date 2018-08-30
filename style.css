@@ -43,13 +43,11 @@ html, body {
 }
 
 #info {
-  position: relative;
+  /* position: relative; */
   display: block;
   margin: auto;
-  vertical-align: middle;
-  padding: 30px;
-  line-height: 2.0vw;
-  font-size: 1.8vw;
+  padding: 25px;
+  font-size: 1.5vw;
   color: white;
 }
 .box3 {
@@ -80,8 +78,6 @@ data.th {
   float: left;
   display: block;
   height: 60%;
-  vertical-align: middle;
-  position: relative;
   margin: 60px;
 }
 
@@ -115,13 +111,17 @@ a:hover {
 
 /* The button in box 4 */
 .cont {
-  /* position: relative; */
+
   float:left;
+  /* margin-top: 140px;
+  margin-
+  height: 60%; */
 }
 
 a.btn {
-  margin-top: 150px;
-  /* margin-left: 20px; */
+  margin-top: 100px;
+  /* margin-left: 70%; */
+  position: fixed;
   float:left;
   width: 180px;
   height: 45px;
@@ -129,7 +129,6 @@ a.btn {
   border: 1px;
   border-style: solid;
   border-color: #a1a0a0;
-  vertical-align: middle;
   /*  background: -webkit-linear-gradient(#5edfff,#53c0da);
   box-shadow:inset -1px -1px 0 #4db3cc, 0 1px 1px rgba(0,0,0,0.1); */
 }
@@ -190,25 +189,31 @@ a.btn:hover p {
   transition: none;
 }
 
-
-@media only screen and (max-width: 860px) {
-  a.btn {
-    width: 100px;
-    height: 70px;
-  }
-}
 /* Use a media query to add a breakpoint at 800px: */
 @media only screen and (max-width: 768px) {
-  .box1, .box2, .box3, .box4 {
+  .box1, .box2, .box3 {
     width: 100%; /* The width is 100%, when the viewport is 768px or smaller */
     height: 60vh;
+  }
+  .box4 {
+    width: 100%; /* The width is 100%, when the viewport is 768px or smaller */
+    height: 80vh;
   }
   #info, #data {
     line-height: 3.4vw;
     font-size: 2.7vw;
   }
+  .cont {
+    width: 100%;
+  }
   a.btn {
-    width: 180px;
-    height: 45px;
+    position: static;
+    margin-top: 0px;
+    margin-left: calc(50vw - 90px);
+  }
+  #foto {
+    width: 236px;
+    height: auto;
+    margin-left: calc(50vw - 118px);;
   }
 }
