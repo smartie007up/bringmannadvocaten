@@ -13,6 +13,7 @@ $ = function(id) {
 var show = function(id) {
   var pop = $(id);
   pop.style.display ='block';
+
 }
 
 var hide = function(id) {
@@ -21,6 +22,10 @@ var hide = function(id) {
 
 document.contactform.onsubmit=function()
 {
+  var emailID = document.contactform.email.value;
+  atpos = emailID.indexOf("@");
+  dotpos = emailID.lastIndexOf(".");
+
   if(document.contactform.fullname.value=="")
   {
     alert("Vul alstublieft uw naam in");
@@ -29,9 +34,23 @@ document.contactform.onsubmit=function()
   }
   else if(document.contactform.email.value=="")
   {
-    alert("Vul alstublieft uw naam in");
+    alert("Vul alstublieft uw e-mailadres in");
     document.contactform.email.focus();
+    return false;
+  }
+  else if (atpos < 1 || ( dotpos - atpos < 2 ))
+  {
+    alert("Vul alstublieft een juist emailadres in.")
+     document.contactform.email.focus() ;
+    return false;
+  }
+  else if(document.contactform.message.value=="")
+  {
+    alert("Schrijf alstublieft een bericht zodat ik u beter kan helpen");
+    document.contactform.message.focus();
     return false;
   }
   return true;
 }
+
+//https://www.tutorialspoint.com/javascript/javascript_form_validations.htm

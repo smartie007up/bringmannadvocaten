@@ -164,3 +164,39 @@ a.btn:hover p {
   -webkit-transition: none;
   transition: none;
 }
+
+#thanks {
+  margin: 50px;
+  color: #53c0da;
+  text-align: center;
+  padding: 50px;
+}
+
+.goback {
+  padding: 90px 0px;
+}
+
+.goback #gob p {
+  color: white;
+}
+
+#gob {
+  position: inherit;
+  text-align: center;
+  width: 180px;
+  height: 45px;
+  cursor: pointer;
+  border: 1px;
+  border-style: solid;
+  border-color: #a1a0a0;
+  vertical-align: middle;
+  font-size: 12pt;
+  font-family: 'Roboto';
+}
+
+#gob:hover {
+  background-color: #f39819;
+  -webkit-transition: none;
+  transition: none;
+
+}

@@ -11,7 +11,6 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="form.css">
   <script type='text/javascript' src="java.js"></script>
-  <?php include('form.php'); ?>
 </head>
 <body>
   <!-- body content here -->
@@ -75,35 +74,36 @@
             <img src="contactformulier.png" id="cntfrm">
             <p> Als u uw gegevens achterlaat dan mail of bel ik u terug </p>
 
-      <form method="post" action="form.php" name="contactform" id="contactform">
-        <div class="gegevens" id="gege">
-        <label for="fullname">Naam:</label>
-        <input type="text" name="fullname" id="naam" placeholder="Naam en achternaam"/>
+            <form method="post" action="form.php" name="contactform" id="contactform">
+              <div class="gegevens" id="gege">
 
-         <br><br>
+                <label for="fullname">Naam:</label>
+                <input type="text" name="fullname" id="naam" placeholder="Naam en achternaam"/>
 
-        <label for="email">Emailadres:</label>
-        <input type="text" name="email" id="mail" placeholder="E-mailadres"/>
+                <br><br>
+                <br><br>
+                <label for="email">Emailadres:</label>
+                <input type="text" name="email" id="mail" placeholder="E-mailadres"/>
 
-         <br><br>
+                <br><br>
+                <br><br>
+                <textarea value="message" name="message" id="textarea" placeholder="Waar kan ik u mee helpen?"></textarea>
 
-        <textarea value="message" name="message" id="textarea" placeholder="Waar kan ik u mee helpen?"></textarea>
-
-         <br><br>
-
-        <input type="submit" name="submit" value="Verzenden">
-            </div>
-      </form>
-    </div>
+                <br><br>
+                <br>
+                <input type="submit" name="submit" id="submit" value="Verzenden">
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
+
+
+      <script src="java.js"></script>
+
+      <div id="footer">
+        <p>&reg Bringmann Advocaten, 2015</p>
       </div>
 
-
-<script src="java.js"></script>
-
-<div id="footer">
-  <p>&reg Bringmann Advocaten, 2015</p>
-</div>
-
-</body>
-</html>
+    </body>
+    </html>
