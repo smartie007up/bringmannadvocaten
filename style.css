@@ -18,9 +18,10 @@ html, body {
   margin: 0;
 }
 
+
 .box1 {
   float: left;
-  background-color: white;
+  /* background-image: radial-gradient(circle, white, #f2f2f2, #bfbfbf); */
   width: 50%;
   height: 50vh;
 }
@@ -32,28 +33,32 @@ html, body {
   vertical-align: middle;
   width: 55%;
   position: relative;
-  top: 25%;
+  top: 30%;
 }
 
 .box2 {
   float: left;
-  background-color:#53c0da;
+  /* background-color: #53c0da; */
+  background-image: linear-gradient(45deg, #2db1d2, #53c0da);
   width: 50%;
   height: 50vh;
 }
 
 #info {
-  /* position: relative; */
   display: block;
   margin: auto;
-  padding: 25px;
-  font-size: 1.5vw;
+  padding: 25px 35px;
+  font-size: calc(12px + .5vw);
+  line-height: calc(12px + .9vw);
+  font-stretch: expanded;
   color: white;
 }
+
 .box3 {
   float: left;
   margin: auto;
-  background-color:#f39819;
+  /* background-color: #f39819; */
+  background-image: linear-gradient(-135deg, #f39819, #da840b);
   width: 50%;
   height: 50vh;
 }
@@ -69,7 +74,7 @@ data.th {
 
 .box4 {
   float: left;
-  background-color: white;
+  /* background-image: radial-gradient(circle, white, #f2f2f2, #bfbfbf); */
   width: 50%;
   height: 50vh;
 }
@@ -77,8 +82,10 @@ data.th {
 #foto {
   float: left;
   display: block;
-  height: 60%;
-  margin: 60px;
+  height: 180px;
+  padding-right: 50px;
+  margin-left: 60px;
+  margin-top: calc(25vh - 90px);
 }
 
 #footer {
@@ -111,24 +118,21 @@ a:hover {
 
 /* The button in box 4 */
 .cont {
-
   float:left;
-  /* margin-top: 140px;
-  margin-
-  height: 60%; */
+  margin-top: calc(25vh - 24px);
 }
 
 a.btn {
-  margin-top: 100px;
-  /* margin-left: 70%; */
-  position: fixed;
-  float:left;
-  width: 180px;
-  height: 45px;
+  position: static;
+  float: left;
+  /* width: 180px; */
+  width: 16vw;
+  height: 48px;
   cursor: pointer;
   border: 1px;
   border-style: solid;
   border-color: #a1a0a0;
+  font-size: 14px;
   /*  background: -webkit-linear-gradient(#5edfff,#53c0da);
   box-shadow:inset -1px -1px 0 #4db3cc, 0 1px 1px rgba(0,0,0,0.1); */
 }
@@ -144,14 +148,16 @@ a.btn p {
 a.btn:hover {
   background-color: #f39819;
   -webkit-transition: none;
-  transition: none;
+  /* transition: none; */
+  transition: all .3s ease-in-out;
   /*  transform: scale(1.1,1.1); */
 }
 
 a.btn:hover p {
   color: white;
   -webkit-transition: none;
-  transition: none;
+  /* transition: none; */
+  transition: all .3s ease-in-out;
 }
 
 #thanks {
@@ -190,7 +196,7 @@ a.btn:hover p {
 }
 
 /* Use a media query to add a breakpoint at 800px: */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   .box1, .box2, .box3 {
     width: 100%; /* The width is 100%, when the viewport is 768px or smaller */
     height: 60vh;
@@ -200,20 +206,27 @@ a.btn:hover p {
     height: 80vh;
   }
   #info, #data {
-    line-height: 3.4vw;
-    font-size: 2.7vw;
+    padding: 40px;
+    /* line-height: 4.4vw; */
+    font-size:   calc(15px + .6vw);
+    /* font-size: 2.5vh; */
+    line-height: calc(15px + 1.2vw);
   }
   .cont {
     width: 100%;
+    margin-top: calc(2vh - 24px);
   }
   a.btn {
+    width: 180px;
     position: static;
     margin-top: 0px;
     margin-left: calc(50vw - 90px);
   }
   #foto {
+    padding-right: 0px;
     width: 236px;
     height: auto;
-    margin-left: calc(50vw - 118px);;
+    margin-left: calc(50vw - 118px);
+    margin-bottom: 50px;
   }
 }
